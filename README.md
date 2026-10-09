@@ -1,11 +1,3 @@
-# CausTech Technologies — Lab 01: Active Directory
-
-**Hands-on IT support and systems administration portfolio**
-
-Welcome to Lab 01 of my CausTech Technologies home lab series.
-
-This project documents the setup of a small business IT environment using Windows Server, Active Directory, DNS, DHCP, and a Windows 11 workstation. It establishes the foundation for future infrastructure projects within the fictional CausTech Technologies environment.
-
 # Lab 01 — Windows Server & Active Directory
 
 ## Overview
