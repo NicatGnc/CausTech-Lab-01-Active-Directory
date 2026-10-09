@@ -1,4 +1,4 @@
-# Lab 01 — Windows Server & Active Directory
+<img width="534" height="477" alt="50" src="https://github.com/user-attachments/assets/4cce0679-2650-46d1-9097-0f7605a3eca1" /># Lab 01 — Windows Server & Active Directory
 
 ## 1. Overview
 
@@ -21,7 +21,15 @@ The virtual machine was configured with the Windows Server installation ISO, all
 * Configured memory and processor resources.
 * Created and configured the virtual hard disk.
 
-**Screenshots:** VirtualBox configuration and resource allocation.
+**Screenshots:**
+
+![VirtualBox main window](screenshots/phase-1-active-directory/01.png)
+
+![Virtual machine configuration](screenshots/phase-1-active-directory/03.png)
+
+![Virtual machine RAM and CPU](screenshots/phase-1-active-directory/04.png)
+
+![Virtual machine resources and storage](screenshots/phase-1-active-directory/05.png)
 
 ## 3. Windows Server Installation
 
@@ -37,7 +45,15 @@ After installation, the initial Windows Server desktop was accessed to begin con
 * Signed in using the local Administrator account.
 * Reviewed the initial server desktop.
 
-**Screenshots:** Windows Server installation, first sign-in, and initial desktop.
+**Screenshots:**
+
+![Windows Server installation](screenshots/phase-1-active-directory/08.png)
+
+![Windows Server installation2](screenshots/phase-1-active-directory/14.png)
+
+![First sign-in as local Administrator](screenshots/phase-1-active-directory/19.png)
+
+![Initial Windows Server desktop](screenshots/phase-1-active-directory/21.png)
 
 ## 4. Domain Controller Preparation
 
@@ -62,7 +78,17 @@ A static IPv4 address was configured to provide a consistent network address for
 * Disabled IPv6 on the network adapter as part of this lab's configuration.
 * Verified the applied settings using PowerShell.
 
-**Screenshots:** Computer name, Ethernet settings, and `ipconfig /all` output.
+**Screenshots:**
+
+![Renaming the server to DC01](screenshots/phase-1-active-directory/26.png)
+
+![Searching for ethernet configuration](screenshots/phase-1-active-directory/33.png)
+
+![Disabling IPv6](screenshots/phase-1-active-directory/33.png)
+
+![Static IPv4 and Ethernet configuration](screenshots/phase-1-active-directory/35.png)
+
+![ipconfig all verification](screenshots/phase-1-active-directory/37.png)
 
 ## 5. Active Directory Domain Services Installation
 
@@ -85,7 +111,17 @@ After promotion, PowerShell was used to inspect the domain configuration with `G
 * Promoted the server to a domain controller.
 * Inspected domain information using PowerShell.
 
-**Screenshots:** AD DS installation, domain configuration, and PowerShell verification.
+**Screenshots:**
+
+![Installing the AD DS role](screenshots/phase-1-active-directory/43.png)
+
+![Installing the AD DS role2](screenshots/phase-1-active-directory/47.png)
+
+![Domain controller promotion and domain configuration](screenshots/phase-1-active-directory/48.png)
+
+![Domain controller promotion and domain configuration2](screenshots/phase-1-active-directory/50.png)
+
+![Get-ADDomain PowerShell verification](screenshots/phase-1-active-directory/64.png)
 
 ## 6. Active Directory Structure
 
@@ -116,7 +152,11 @@ The built-in Domain Controllers OU contains the `DC01` computer account.
 * Created departmental OUs.
 * Organized the directory for users, computers, and groups.
 
-**Screenshots:** Active Directory console and completed OU structure.
+**Screenshots:**
+
+![Active Directory Users and Computers](screenshots/phase-1-active-directory/66.png)
+
+![Completed Organizational Unit structure](screenshots/phase-1-active-directory/70.png)
 
 ## 7. Security Group Configuration
 
@@ -138,7 +178,11 @@ The groups created for this lab were:
 * Created departmental security groups.
 * Reviewed the completed group list.
 
-**Screenshots:** Creating the first group and viewing the security groups.
+**Screenshots:**
+
+![Creating the IT-Admins security group](screenshots/phase-1-active-directory/72.png)
+
+![Completed departmental security groups](screenshots/phase-1-active-directory/73.png)
 
 ## 8. Domain User Creation
 
@@ -167,7 +211,15 @@ The other nine accounts were:
 * Automated the creation of nine additional accounts with PowerShell.
 * Reviewed users in the Sales department.
 
-**Screenshots:** User creation, group membership, PowerShell script, and Sales users.
+**Screenshots:**
+
+![Creating the jcarter domain user](screenshots/phase-1-active-directory/74.png)
+
+![Adding jcarter to IT-Admins](screenshots/phase-1-active-directory/81.png)
+
+![PowerShell script for creating additional users](screenshots/phase-1-active-directory/85.png)
+
+![Sales department users](screenshots/phase-1-active-directory/89.png)
 
 The script is available in [`powershell/New-LabUsers.ps1`](powershell/New-LabUsers.ps1).
 
@@ -179,13 +231,15 @@ PowerShell commands were used to inspect the domain and user accounts after conf
 
 These checks support verification of the directory configuration and created accounts.
 
-**Screenshots:** PowerShell commands and their output.
+**Screenshots:**
 
-## 10. Results
+![Get-ADUser command and output](screenshots/phase-1-active-directory/92.png)
+
+## 10. Results and Project Notes
 
 This phase established the foundation of the CausTech Technologies lab environment.
 
-The completed work included:
+**Completed work:**
 
 * Windows Server virtual machine setup.
 * Static IP and DNS configuration for `DC01`.
@@ -197,11 +251,9 @@ The completed work included:
 
 Further testing of the Windows 11 domain client and DHCP configuration is documented in the subsequent lab phases.
 
-## 11. Project Notes
-
 This is a personal home lab created for hands-on learning and IT portfolio development. CausTech Technologies is a fictional company.
 
-Supporting materials:
+**Supporting materials:**
 
 * [PowerShell user-creation script](powershell/New-LabUsers.ps1)
 * [Validation documentation](documentation/validation.md)
