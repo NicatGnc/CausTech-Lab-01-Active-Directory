@@ -1,4 +1,5 @@
-<img width="534" height="477" alt="50" src="https://github.com/user-attachments/assets/4cce0679-2650-46d1-9097-0f7605a3eca1" /># Lab 01 — Windows Server & Active Directory
+<img width="534" height="477" alt="50" src="https://github.com/user-attachments/assets/4cce0679-2650-46d1-9097-0f7605a3eca1" />
+# Lab 01 — Windows Server & Active Directory
 
 ## 1. Overview
 
