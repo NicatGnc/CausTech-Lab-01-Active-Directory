@@ -1,62 +1,63 @@
-# Lab 01 — Active Directory Infrastructure
-
-**Organization:** CausTech Technologies
-**Project Type:** Home Lab | Systems Administration
-**Status:** Completed
+# Lab 01 — Windows Server & Active Directory
 
 ## Overview
 
-This project establishes the foundational IT infrastructure for CausTech Technologies, a fictional company created for hands-on systems administration practice.
+This home lab simulates a small company IT environment using Oracle VirtualBox, Windows Server, and Windows 11.
 
-The lab simulates a small business network using Windows Server and Windows 11 virtual machines. Active Directory Domain Services provides centralized identity and computer management, while DNS and DHCP support internal name resolution and automatic network configuration.
+The fictional company, CausTech Technologies, uses an Active Directory domain to centrally manage users, groups, computers, and network services.
 
-## Infrastructure
+## Lab Environment
 
-| Component               | Configuration                   |
-| ----------------------- | ------------------------------- |
-| Domain Controller       | DC01                            |
-| Client Workstation      | CLIENT01                        |
-| Active Directory Domain | `caustech.local`                |
-| NetBIOS Domain          | `CAUSTECH`                      |
-| Virtual Network         | `CausTech-LAN`                  |
-| Domain Controller IP    | `192.168.10.10`                 |
-| DHCP Address Pool       | `192.168.10.100–192.168.10.200` |
-| DNS Server              | `192.168.10.10`                 |
-| Virtualization          | Oracle VirtualBox               |
+| Component          | Configuration                   |
+| ------------------ | ------------------------------- |
+| Domain Controller  | DC01                            |
+| Client Workstation | CLIENT01                        |
+| Domain             | `caustech.local`                |
+| NetBIOS Name       | `CAUSTECH`                      |
+| Virtual Network    | `CausTech-LAN`                  |
+| DC01 IP Address    | `192.168.10.10`                 |
+| DHCP Scope         | `192.168.10.100–192.168.10.200` |
+| DNS Server         | `192.168.10.10`                 |
 
-## Implementation
+## Tasks Completed
 
 * Installed and configured Windows Server.
-* Assigned a static IPv4 address to DC01.
+* Configured DC01 with a static IP address.
 * Installed Active Directory Domain Services and DNS.
 * Created the `caustech.local` domain.
-* Designed departmental Organizational Units for IT, HR, Finance, and Sales.
-* Created fictional user accounts and department security groups.
-* Automated user creation and group membership with PowerShell.
-* Installed and authorized DHCP and configured an IPv4 scope.
-* Joined CLIENT01 to the Active Directory domain.
-* Tested domain authentication and internal network configuration.
+* Created departmental Organizational Units (OUs).
+* Created security groups for IT, HR, Finance, and Sales.
+* Created 10 fictional domain user accounts.
+* Used PowerShell to automate user creation and group membership.
+* Installed and authorized the DHCP Server role.
+* Created and activated a DHCP IPv4 scope.
+* Joined CLIENT01 to the domain.
+* Signed in using a domain account and configured automatic network addressing.
 
-## Repository Contents
+## Active Directory Structure
 
-* `powershell/` — Scripts used to automate Active Directory administration.
-* `documentation/` — Configuration notes, validation procedures, and test results.
-* `screenshots/` — Visual evidence of the lab configuration and testing.
+```text
+caustech.local
+├── CausTech Users
+│   ├── IT
+│   ├── HR
+│   ├── Finance
+│   └── Sales
+├── CausTech Computers
+│   ├── Workstations
+│   └── Servers
+├── CausTech Groups
+└── Domain Controllers
+    └── DC01
+```
 
-## Validation
+## Verification
 
-The lab includes checks for domain membership, user authentication, DHCP configuration, DNS resolution, and connectivity between the client and domain controller.
+The lab included testing domain sign-in, DHCP configuration, DNS resolution, and connectivity between CLIENT01 and DC01.
 
-See [Validation and Testing](documentation/validation.md) for the test procedures and results.
+Screenshots and exact test results will be added to this repository as supporting evidence.
 
-## Future Expansion
 
-This environment is intended to serve as the foundation for additional CausTech infrastructure projects, including:
+## Project Type
 
-* **Lab 02 — File Server:** Departmental shares, NTFS permissions, and access control.
-* **Lab 03 — Web Server:** IIS installation, website hosting, and internal DNS configuration.
-* **Future labs:** Additional Windows administration, security, networking, and troubleshooting exercises.
-
-## Disclaimer
-
-CausTech Technologies is a fictional organization used for educational home lab projects. This repository documents simulated infrastructure built for learning and portfolio development; it does not represent a production deployment or commercial work experience.
+Personal home lab built for hands-on learning and IT portfolio development. CausTech Technologies is a fictional company.
