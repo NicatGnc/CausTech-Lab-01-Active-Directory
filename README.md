@@ -257,3 +257,6 @@ This is a personal home lab created for hands-on learning and IT portfolio devel
 
 * [PowerShell user-creation script](powershell/New-LabUsers.ps1)
 * [Validation documentation](documentation/validation.md)
+
+**Related project:** 
+[Lab 02 — Windows Client](https://github.com/NicatGnc/CausTech-Lab-02-Windows-Client) 
